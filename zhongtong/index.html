@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中同社区-中文同好交流与兴趣社区参与指南</title>
+<meta name="description" content="中同社区是中文同好聚集的交流空间，提供版块导航、热门话题、发帖规范、社区礼仪与新手指引，帮助用户快速了解如何参与讨论、结识同好并安全使用社区。">
+<meta name="keywords" content="中同社区,中文同好社区,兴趣交流社区,社区论坛,同好交流,社区版块,发帖规范">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#f4f6fb;
+  --panel:#ffffff;
+  --ink:#1d2233;
+  --ink-soft:#5a6178;
+  --line:#e3e7f0;
+  --brand:#3f5bd9;
+  --brand-deep:#2c41a8;
+  --brand-soft:#eaeeff;
+  --accent:#ff7a45;
+  --accent-soft:#fff0e9;
+  --radius:14px;
+  --shadow:0 6px 22px rgba(29,34,51,.07);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:var(--brand);text-decoration:none;}
+a:hover{color:var(--brand-deep);}
+img{max-width:100%;}
+h1,h2,h3{line-height:1.35;margin:0 0 .6em;}
+p{margin:0 0 1em;}
+ul,ol{margin:0 0 1em;padding-left:1.25em;}
+li{margin-bottom:.35em;}
+
+/* 顶部 */
+.topbar{
+  background:linear-gradient(120deg,#2c41a8 0%,#3f5bd9 55%,#5b74e8 100%);
+  color:#fff;
+  padding:10px 0;
+  font-size:13px;
+}
+.topbar .wrap{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.topbar span{opacity:.9;}
+.topbar .quick a{color:#fff;opacity:.88;margin-left:16px;}
+.topbar .quick a:hover{opacity:1;text-decoration:underline;}
+
+.wrap{
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* 页眉 */
+header.site-head{
+  background:var(--panel);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 2px 10px rgba(29,34,51,.04);
+}
+.head-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:14px 0;
+  flex-wrap:wrap;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand .logo{
+  width:44px;height:44px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--brand),#6f86f0);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:19px;
+  letter-spacing:1px;
+  flex:none;
+}
+.brand .name{
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+.brand .slogan{
+  font-size:12px;
+  color:var(--ink-soft);
+  letter-spacing:.5px;
+}
+nav.main-nav ul{
+  list-style:none;
+  display:flex;
+  gap:6px;
+  margin:0;padding:0;
+  flex-wrap:wrap;
+}
+nav.main-nav a{
+  display:block;
+  padding:8px 14px;
+  border-radius:999px;
+  color:var(--ink);
+  font-size:15px;
+  transition:.2s;
+}
+nav.main-nav a:hover,nav.main-nav a.active{
+  background:var(--brand-soft);
+  color:var(--brand-deep);
+}
+.head-actions .btn{
+  display:inline-block;
+  padding:9px 20px;
+  border-radius:999px;
+  background:var(--brand);
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  transition:.2s;
+}
+.head-actions .btn:hover{background:var(--brand-deep);color:#fff;}
+
+/* 首屏 */
+.hero{
+  padding:52px 0 44px;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(63,91,217,.12),transparent 42%),
+    radial-gradient(circle at 6% 90%,rgba(255,122,69,.10),transparent 40%),
+    var(--bg);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  gap:38px;
+  align-items:center;
+}
+.hero h1{
+  font-size:34px;
+  letter-spacing:.5px;
+  margin-bottom:16px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--brand);
+}
+.hero .lead{
+  font-size:16.5px;
+  color:var(--ink-soft);
+  margin-bottom:22px;
+}
+.hero-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:26px;
+}
+.hero-tags span{
+  background:#fff;
+  border:1px solid var(--line);
+  color:var(--ink-soft);
+  font-size:13px;
+  padding:5px 13px;
+  border-radius:999px;
+}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-primary,.btn-ghost{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:10px;
+  font-weight:600;
+  font-size:15px;
+  transition:.2s;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 16px rgba(63,91,217,.28);}
+.btn-primary:hover{background:var(--brand-deep);color:#fff;}
+.btn-ghost{background:#fff;color:var(--brand-deep);border:1px solid #ccd5f5;}
+.btn-ghost:hover{background:var(--brand-soft);color:var(--brand-deep);}
+
+.hero-panel{
+  background:var(--panel);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px 22px 12px;
+  border:1px solid var(--line);
+}
+.hero-panel h2{
+  font-size:16px;
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.hero-panel h2::before{
+  content:"";
+  width:4px;height:16px;
+  background:var(--accent);
+  border-radius:2px;
+  display:inline-block;
+}
+.topic-list{list-style:none;margin:0;padding:0;}
+.topic-list li{
+  padding:11px 0;
+  border-bottom:1px dashed var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  font-size:14.5px;
+}
+.topic-list li:last-child{border-bottom:none;}
+.topic-list .tag{
+  font-size:12px;
+  color:var(--accent);
+  background:var(--accent-soft);
+  border-radius:6px;
+  padding:1px 8px;
+  flex:none;
+  height:fit-content;
+}
+.topic-list .t{color:var(--ink);}
+.topic-list .t:hover{color:var(--brand);}
+
+/* 通用区块 */
+section.block{padding:46px 0;}
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:26px;
+  flex-wrap:wrap;
+}
+.section-head h2{
+  font-size:24px;
+  margin:0;
+}
+.section-head .sub{
+  color:var(--ink-soft);
+  font-size:14px;
+  margin-top:6px;
+}
+.section-head .more{
+  font-size:14px;
+  color:var(--brand);
+  flex:none;
+}
+
+/* 版块导航 */
+.board-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  gap:18px;
+}
+.board-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px;
+  transition:.22s;
+}
+.board-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+  border-color:#c9d3f2;
+}
+.board-card .icon{
+  width:40px;height:40px;
+  border-radius:10px;
+  background:var(--brand-soft);
+  color:var(--brand-deep);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+  margin-bottom:12px;
+}
+.board-card h3{
+  font-size:16.5px;
+  margin-bottom:8px;
+}
+.board-card p{
+  font-size:14px;
+  color:var(--ink-soft);
+  margin-bottom:10px;
+}
+.board-card .meta{
+  font-size:12.5px;
+  color:#8b93a8;
+}
+
+/* 内容 + 侧栏 */
+.content-layout{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:30px;
+  align-items:start;
+}
+.article-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+  margin-bottom:22px;
+}
+.article-card h2{
+  font-size:21px;
+  margin-bottom:14px;
+}
+.article-card h3{
+  font-size:16.5px;
+  margin-top:22px;
+  color:var(--brand-deep);
+}
+.article-card p,.article-card li{font-size:15px;color:#3a4055;}
+
+.steps{
+  counter-reset:step;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.steps li{
+  position:relative;
+  padding-left:46px;
+  margin-bottom:16px;
+}
+.steps li::before{
+  counter-increment:step;
+  content:counter(step);
+  position:absolute;
+  left:0;top:1px;
+  width:30px;height:30px;
+  border-radius:50%;
+  background:var(--brand-soft);
+  color:var(--brand-deep);
+  font-weight:700;
+  font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps strong{display:block;color:var(--ink);}
+
+.side-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  margin-bottom:20px;
+}
+.side-card h3{
+  font-size:16px;
+  margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+.side-list{list-style:none;margin:0;padding:0;}
+.side-list li{
+  font-size:14px;
+  padding:8px 0;
+  border-bottom:1px dashed var(--line);
+}
+.side-list li:last-child{border-bottom:none;}
+.side-list a{color:#3a4055;}
+.side-list a:hover{color:var(--brand);}
+.notice{
+  background:var(--accent-soft);
+  border:1px solid #ffd9c8;
+  border-radius:10px;
+  padding:14px 16px;
+  font-size:13.5px;
+  color:#8a4a25;
+  line-height:1.7;
+}
+.notice strong{color:#b3531f;}
+
+/* 规则双列 */
+.rule-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+.rule-item{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-left:4px solid var(--brand);
+  border-radius:10px;
+  padding:18px 20px;
+}
+.rule-item h3{font-size:15.5px;margin-bottom:8px;}
+.rule-item p{font-size:14px;color:var(--ink-soft);margin:0;}
+
+/* FAQ */
+.faq-item{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+.faq-item summary{
+  cursor:pointer;
+  padding:16px 20px;
+  font-weight:600;
+  font-size:15.5px;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{
+  content:"+";
+  font-size:20px;
+  color:var(--brand);
+  flex:none;
+  transition:.2s;
+}
+.faq-item[open] summary::after{content:"−";}
+.faq-item .answer{
+  padding:0 20px 18px;
+  font-size:14.5px;
+  color:var(--ink-soft);
+  border-top:1px dashed var(--line);
+  padding-top:14px;
+}
+
+/* 页脚 */
+footer.site-foot{
+  background:#1d2233;
+  color:#b9c0d4;
+  padding:46px 0 26px;
+  margin-top:20px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:28px;
+  margin-bottom:32px;
+}
+.foot-grid h4{
+  color:#fff;
+  font-size:15px;
+  margin:0 0 14px;
+}
+.foot-grid p{font-size:13.5px;line-height:1.8;color:#9aa3bd;}
+.foot-grid ul{list-style:none;padding:0;margin:0;}
+.foot-grid li{margin-bottom:9px;}
+.foot-grid a{color:#b9c0d4;font-size:13.5px;}
+.foot-grid a:hover{color:#fff;}
+.foot-bottom{
+  border-top:1px solid #2c3348;
+  padding-top:20px;
+  font-size:13px;
+  color:#8891aa;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* 响应式 */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;}
+  .content-layout{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .hero h1{font-size:28px;}
+}
+@media (max-width:640px){
+  .head-inner{flex-direction:column;align-items:flex-start;}
+  nav.main-nav ul{gap:2px;}
+  nav.main-nav a{padding:7px 11px;font-size:14px;}
+  .hero{padding:36px 0 30px;}
+  .hero h1{font-size:24px;}
+  section.block{padding:34px 0;}
+  .section-head h2{font-size:20px;}
+  .article-card{padding:20px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .topbar .quick a{margin-left:0;margin-right:14px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>中同社区 · 中文同好交流空间</span>
+    <div class="quick">
+      <a href="#boards">版块导航</a>
+      <a href="#guide">新手指引</a>
+      <a href="#rules">社区规范</a>
+      <a href="#faq">常见问题</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <div class="logo">中同</div>
+      <div>
+        <div class="name">中同社区</div>
+        <div class="slogan">找同好 · 聊兴趣 · 慢慢认识</div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#boards" class="active">版块</a></li>
+        <li><a href="#hot">热门话题</a></li>
+        <li><a href="#guide">参与指南</a></li>
+        <li><a href="#rules">社区规范</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <div class="head-actions">
+      <a href="#guide" class="btn">如何加入</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>中同社区：一个给中文同好的<em>兴趣交流空间</em></h1>
+        <p class="lead">如果你在找一个能安静聊兴趣、认真找同好、按话题分类浏览的中文社区，中同社区就是围绕这件事搭建的。这里按兴趣划分版块，鼓励实名之外的真诚表达，也强调清晰的社区规则与友好的交流氛围。</p>
+        <div class="hero-tags">
+          <span>兴趣版块</span>
+          <span>话题讨论</span>
+          <span>新手指引</span>
+          <span>社区规范</span>
+          <span>同好互助</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#boards" class="btn-primary">浏览社区版块</a>
+          <a href="#guide" class="btn-ghost">阅读参与指南</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="近期讨论方向">
+        <h2>大家在聊什么</h2>
+        <ul class="topic-list">
+          <li><a class="t" href="#hot">第一次进社区，怎么介绍自己比较自然？</a><span class="tag">新手</span></li>
+          <li><a class="t" href="#hot">如何判断一个兴趣版块是否适合长期参与？</a><span class="tag">讨论</span></li>
+          <li><a class="t" href="#rules">发帖前需要了解哪些基本规范？</a><span class="tag">规范</span></li>
+          <li><a class="t" href="#hot">线上交流与线下见面，边界怎么把握？</a><span class="tag">安全</span></li>
+          <li><a class="t" href="#faq">遇到不友善回复时应该怎么处理？</a><span class="tag">互助</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 版块导航 -->
+  <section class="block" id="boards">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>社区版块导航</h2>
+          <div class="sub">按兴趣方向划分，先找到自己熟悉的话题，再慢慢扩展到其他版块</div>
+        </div>
+        <a class="more" href="#guide">不了解从哪开始？看指引 →</a>
+      </div>
+      <div class="board-grid">
+        <article class="board-card">
+          <div class="icon">聊</div>
+          <h3>综合闲聊区</h3>
+          <p>适合日常分享、轻量提问和自我介绍，是新成员熟悉社区节奏的第一站。</p>
+          <div class="meta">适合：新成员 · 日常交流</div>
+        </article>
+        <article class="board-card">
+          <div class="icon">同</div>
+          <h3>兴趣同好版</h3>
+          <p>围绕阅读、音乐、影视、运动、手工等具体兴趣展开的长期讨论版块。</p>
+          <div class="meta">适合：有明确兴趣方向的成员</div>
+        </article>
+        <article class="board-card">
+          <div class="icon">问</div>
+          <h3>求助与答疑</h3>
+          <p>生活经验、工具使用、学习方向等问题的互助区，鼓励具体描述、具体回答。</p>
+          <div class="meta">适合：需要经验参考的提问者</div>
+        </article>
+        <article class="board-card">
+          <div class="icon">记</div>
+          <h3>随笔与记录</h3>
+          <p>长文、观察、阶段性总结的发布区，适合愿意认真写字、慢慢交流的人。</p>
+          <div class="meta">适合：偏好长内容表达</div>
+        </article>
+        <article class="board-card">
+          <div class="icon">新</div>
+          <h3>新人报到</h3>
+          <p>集中发布自我介绍，让老成员更快认识你，也方便找到兴趣相近的人。</p>
+          <div class="meta">适合：刚注册的成员</div>
+        </article>
+        <article class="board-card">
+          <div class="icon">管</div>
+          <h3>站务与反馈</h3>
+          <p>功能建议、规则疑问、举报与申诉的公开处理区，处理过程尽量透明可查。</p>
+          <div class="meta">适合：需要反馈与协助</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容主体 -->
+  <section class="block" id="hot" style="padding-top:0;">
+    <div class="wrap content-layout">
+      <div>
+        <article class="article-card">
+          <h2>中同社区是什么，适合哪些人</h2>
+          <p>中同社区是一个面向中文用户的兴趣交流型社区。它不追求信息流的极速滚动，而是把内容按版块整理，让讨论可以被找到、被回顾、被继续。相比大型综合平台，这类社区更依赖成员之间的相互熟悉与长期参与。</p>
+          <p>它比较适合这几类人：有稳定兴趣方向、希望找到同好交流的人；喜欢按主题阅读、不习惯被算法推荐牵着走的人；愿意遵守基本规则、进行理性讨论的人。如果你只是想快速刷短视频或寻找即时刺激，这类社区可能并不是最匹配的选择。</p>
+          <p>理解这类社区的关键，是把它看成一个需要共同维护的公共空间。你的每一次发帖、回复和举报，都会影响其他人对这里的感受。</p>
+        </article>
+
+        <article class="article-card" id="guide">
+          <h2>新成员参与指南：从注册到第一次发帖</h2>
+          <p>很多新成员卡在“注册之后不知道做什么”。下面这套顺序比较稳妥，可以帮你减少试错。</p>
+          <ol class="steps">
+            <li>
+              <strong>先读规则，再发内容</strong>
+              花几分钟浏览社区规范与版块说明，了解哪些内容会被删除、哪些行为会被限制，能避免大部分不必要的误会。
+            </li>
+            <li>
+              <strong>用搜索代替直接提问</strong>
+              很多基础问题已经被讨论过。先搜索关键词，再决定是补充提问还是新开话题，这样更容易得到认真回复。
+            </li>
+            <li>
+              <strong>在报到区做一次简短自我介绍</strong>
+              不必写得面面俱到，说明兴趣方向、为什么来、想找什么类型的交流即可，方便同好识别你。
+            </li>
+            <li>
+              <strong>从回复开始，而不是从发帖开始</strong>
+              先在你熟悉的版块回复几个具体问题，熟悉语气和节奏，再开新帖会更自然。
+            </li>
+            <li>
+              <strong>保持稳定的参与频率</strong>
+              社区关系靠时间积累，偶尔来一次很难建立信任，持续参与比一次性输出大量内容更有效。
+            </li>
+          </ol>
+        </article>
+
+        <article class="article-card">
+          <h2>让讨论更顺畅的几个习惯</h2>
+          <h3>标题写清楚，正文给背景</h3>
+          <p>“求助”“有人吗”这类标题很难获得有效回应。把问题范围、已经尝试过的方法、希望得到什么类型的建议写清楚，回复质量通常会有明显提升。</p>
+          <h3>对不同意见保持基本礼貌</h3>
+          <p>兴趣社区的价值在于多元视角。反驳观点时针对内容本身，避免针对发言者个人，讨论才可能继续。</p>
+          <h3>尊重隐私与边界</h3>
+          <p>不要随意公开他人信息，也不要在对方明确表示不愿意后继续追问私人话题。线上交流保持适度距离，是长期相处的前提。</p>
+          <h3>善用举报而不是争吵</h3>
+          <p>遇到明显违规内容，使用举报功能并简要说明理由，比在评论区反复争论更有效率，也更容易被管理方处理。</p>
+        </article>
+      </div>
+
+      <aside>
+        <div class="side-card">
+          <h3>热门话题方向</h3>
+          <ul class="side-list">
+            <li><a href="#guide">如何写好第一篇自我介绍</a></li>
+            <li><a href="#hot">兴趣版块的选择与取舍</a></li>
+            <li><a href="#rules">发帖被删除的常见原因</a></li>
+            <li><a href="#faq">线上交流的安全边界</a></li>
+            <li><a href="#boards">从闲聊区到深度版的过渡</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>社区提醒</h3>
+          <div class="notice">
+            <strong>注意：</strong>请勿在公开版块发布真实姓名、住址、证件号、联系方式等个人敏感信息。涉及金钱往来、线下见面的邀约，请保持谨慎并优先选择公开场合。
+          </div>
+        </div>
+
+        <div class="side-card">
+          <h3>常用入口</h3>
+          <ul class="side-list">
+            <li><a href="#boards">全部版块列表</a></li>
+            <li><a href="#guide">新手指引</a></li>
+            <li><a href="#rules">社区规范</a></li>
+            <li><a href="#faq">常见问题</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 社区规范 -->
+  <section class="block" id="rules" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>社区规范要点</h2>
+          <div class="sub">规则的目的不是限制表达，而是让讨论可以持续进行</div>
+        </div>
+      </div>
+      <div class="rule-grid">
+        <div class="rule-item">
+          <h3>真实与善意</h3>
+          <p>不冒用他人身份，不编造经历误导他人，不发布明显虚假或带有欺骗性质的内容。</p>
+        </div>
+        <div class="rule-item">
+          <h3>尊重与克制</h3>
+          <p>禁止人身攻击、歧视性言论、恶意骚扰与反复挑衅。观点冲突时对事不对人。</p>
+        </div>
+        <div class="rule-item">
+          <h3>隐私保护</h3>
+          <p>未经允许不得公开他人个人信息，包括截图中的头像、昵称、聊天记录等可识别内容。</p>
+        </div>
+        <div class="rule-item">
+          <h3>内容合规</h3>
+          <p>不发布违法违规信息、垃圾广告、诱导性链接与批量重复内容，避免影响正常浏览。</p>
+        </div>
+        <div class="rule-item">
+          <h3>版块秩序</h3>
+          <p>按主题在对应版块发帖，标题与内容相符，避免一帖多发、跨版刷屏。</p>
+        </div>
+        <div class="rule-item">
+          <h3>理性举报</h3>
+          <p>举报需基于具体事实，恶意举报同样会被处理。对处理结果有异议可通过站务区申诉。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>常见问题</h2>
+          <div class="sub">关于参与中同社区的高频疑问整理</div>
+        </div>
+      </div>
+
+      <details class="faq-item" open>
+        <summary>刚进入中同社区，应该先做什么？</summary>
+        <div class="answer">建议先浏览社区规范和版块说明，再在报到区做一次简短自我介绍。之后可以挑一个你熟悉的版块，从回复他人帖子开始，逐步熟悉交流节奏，不必急于发长文或开新话题。</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>发帖总是没人回复，可能是什么原因？</summary>
+        <div class="answer">常见原因包括：标题过于笼统、正文缺少必要背景、发在了不相关的版块，或者问题本身已有大量重复讨论。可以尝试补充具体信息、调整到合适版块，并先搜索是否已有相近内容。</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>遇到不友善的回复该怎么处理？</summary>
+        <div class="answer">不建议在评论区持续争吵。可以先停止回复，保留截图，通过举报功能提交给管理方处理。如果对方持续骚扰，可使用屏蔽功能并联系站务反馈。</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>社区里可以发布联系方式或组织线下活动吗？</summary>
+        <div class="answer">公开版块通常不建议直接发布个人联系方式。线下活动相关信息请遵守社区规范，避免涉及金钱交易与安全风险。参与任何线下见面都应保持谨慎，优先选择公开场合。</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>如何找到和自己兴趣相近的成员？</summary>
+        <div class="answer">可以从对应兴趣版块的历史帖入手，观察长期活跃且发言质量较高的成员，通过回复和讨论自然建立联系。相比直接私信，公开讨论中的互动更容易被接受。</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>帖子被删除或账号被限制怎么办？</summary>
+        <div class="answer">先查看是否收到规则提醒，确认是否违反了版块说明或社区规范。如果认为处理有误，可在站务与反馈区按格式提交申诉，说明具体情况，等待管理方复核。</div>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>中同社区</h4>
+        <p>面向中文用户的兴趣交流社区，按版块组织内容，鼓励认真表达与长期参与。希望每一个来到这里的人，都能找到愿意好好说话的同好。</p>
+      </div>
+      <div>
+        <h4>社区版块</h4>
+        <ul>
+          <li><a href="#boards">综合闲聊区</a></li>
+          <li><a href="#boards">兴趣同好版</a></li>
+          <li><a href="#boards">求助与答疑</a></li>
+          <li><a href="#boards">随笔与记录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与帮助</h4>
+        <ul>
+          <li><a href="#guide">新手指引</a></li>
+          <li><a href="#rules">社区规范</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#hot">话题浏览</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>安全提示</h4>
+        <ul>
+          <li>保护个人隐私信息</li>
+          <li>谨慎对待线下邀约</li>
+          <li>理性使用举报功能</li>
+          <li>遵守社区基本规则</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>中同社区 · 中文同好交流空间</span>
+      <span>请遵守社区规范，共同维护良好讨论氛围</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var navLinks = document.querySelectorAll('nav.main-nav a');
+  navLinks.forEach(function(link){
+    link.addEventListener('click', function(){
+      navLinks.forEach(function(l){ l.classList.remove('active'); });
+      link.classList.add('active');
+    });
+  });
+})();
+</script>
+
+</body>
+  </html>
